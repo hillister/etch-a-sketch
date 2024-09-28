@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+}
+
+.column {
+    background-color: red;
+    padding: 5px;
+    border-style: solid;
+}
