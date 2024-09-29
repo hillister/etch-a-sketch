@@ -1,8 +1,18 @@
 .container {
     display: flex;
+    width: 480px;
+    height: 480px;
+    border-style: solid;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    width: 100%;
 }
 
 .column {
-    padding: 10px;
     border-style: solid;
-}
+    flex-grow: 1;
+} 
+
