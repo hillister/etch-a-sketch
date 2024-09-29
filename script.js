@@ -24,3 +24,13 @@ for (i=0; i<16; i++){
     }
 
 }
+
+const button = document.createElement("button");
+button.classList.add("button");
+button.textContent = "New Grid"
+document.body.appendChild(button);
+document.body.insertBefore(button, document.body.firstChild);
+
+button.addEventListener("click", function(){
+    prompt("Enter new grid size: ");
+} );
