@@ -3,13 +3,24 @@ const container = document.body.appendChild(document.createElement("div"));
 container.classList.add("container");
 
 for (i=0; i<16; i++){
-    const row = document.createElement("div")
+    let row = document.createElement("div")
     row.classList.add("row");
     container.appendChild(row);
+
     for (j=0; j<16; j++){
-        const column = document.createElement("div")
+        let column = document.createElement("div")
         column.classList.add("column");
         row.appendChild(column); 
+
+
+        column.addEventListener("mouseenter", function(){
+            let randomColor = "rgb(" + 
+                Math.floor(Math.random()* 256) + "," +
+                Math.floor(Math.random()* 256) + "," +
+                Math.floor(Math.random()* 256) + ")";
+            console.log(`Hovered over column at row ${i}, column ${j}. Color: ${randomColor}`); // Debugging info
+            column.style.backgroundColor = randomColor;
+        });
     }
 
 }
